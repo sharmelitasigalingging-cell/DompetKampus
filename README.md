@@ -70,7 +70,7 @@ const tambahTransaksi = (tipe) => {
 ### Tampilan di HP Android via Expo Go
 
 <p align="center">
-  <img src="./<img width="738" height="1600" alt="ss hp" src="https://github.com/user-attachments/assets/ec1ad393-1a2a-43ea-8b90-f288be87903e" />
+  <img src="./https://github.com/sharmelitasigalingging-cell/DompetKampus/blob/main/ss%20hp.jpeg://github.com/user-attachments/assets/ec1ad393-1a2a-43ea-8b90-f288be87903e" />
 " width="300" alt="DompetKampus di Expo Go"/>
 </p>
 
