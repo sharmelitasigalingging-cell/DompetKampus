@@ -1,26 +1,55 @@
-# 💳 DompetKampus — Expense Tracker App
+# 💳 Dompet Kampus — Expense Tracker App
 
-> **UTS Project | Pemrograman Mobile (React Native)**
-> Nama: **Sharmelita Arini Teresia Sigalingging**
+<p align="center">
+  <img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+  <img src="https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Status-Running-brightgreen?style=for-the-badge"/>
+</p>
+
+> **UTS Project — Pemrograman Mobile (React Native)**
+> 👤 Nama: **Sharmelita Arini Teresia Sigalingging**
 
 ---
 
 ## 📜 Deskripsi Proyek
 
-**DompetKampus** adalah aplikasi pencatat keuangan pribadi sederhana yang dibangun menggunakan **React Native + Expo**. Aplikasi ini memungkinkan pengguna mencatat transaksi pemasukan dan pengeluaran harian, menampilkan riwayat transaksi, serta menghitung saldo secara otomatis dan real-time.
+**Dompet Kampus** adalah aplikasi pencatat keuangan pribadi sederhana berbasis **React Native + Expo**. Pengguna dapat mencatat transaksi pemasukan dan pengeluaran, melihat riwayat transaksi, serta memantau saldo secara otomatis dan real-time.
 
 ---
 
 ## ✅ Fitur yang Diimplementasikan
 
-| No | Fitur | Status |
-|----|-------|--------|
-| 1 | **Header Saldo** — Saldo otomatis berubah saat transaksi ditambahkan | ✅ |
-| 2 | **Form Input** — Input deskripsi & nominal transaksi | ✅ |
-| 3 | **2 Tombol** — "Pemasukan" (Hijau) & "Pengeluaran" (Merah) | ✅ |
-| 4 | **FlatList** — Riwayat transaksi dengan pesan empty state | ✅ |
-| 5 | **Conditional Styling** — Nominal hijau (masuk) / merah (keluar) | ✅ |
-| 6 | **State Management** — `useState` array of objects | ✅ |
+| No | Fitur | Keterangan | Status |
+|----|-------|------------|--------|
+| 1 | **Header Saldo** | Saldo berubah otomatis (Pemasukan - Pengeluaran) | ✅ |
+| 2 | **Ringkasan** | Total pemasukan & pengeluaran tampil di header | ✅ |
+| 3 | **Form Input** | Input deskripsi & nominal transaksi | ✅ |
+| 4 | **2 Tombol** | Pemasukan (Hijau) & Pengeluaran (Merah) | ✅ |
+| 5 | **FlatList** | Riwayat transaksi + pesan jika kosong | ✅ |
+| 6 | **Conditional Styling** | Nominal hijau (masuk) / merah (keluar) | ✅ |
+| 7 | **State Management** | `useState` array of objects | ✅ |
+
+---
+
+## 📸 Screenshot Aplikasi Berjalan
+
+### 📱 Tampilan di HP Android (Expo Go)
+
+<p align="center">
+  <img src="./screenshots/ss_hp.jpeg" width="320" alt="Dompet Kampus di HP via Expo Go"/>
+</p>
+
+<p align="center"><i>Aplikasi berjalan di perangkat Android via Expo Go — Saldo Rp 40.000</i></p>
+
+---
+
+### 💻 Tampilan di Expo Snack (Browser)
+
+<p align="center">
+  <img src="./screenshots/uts_praktek.PNG" width="700" alt="Dompet Kampus di Expo Snack"/>
+</p>
+
+<p align="center"><i>Aplikasi berjalan di Expo Snack — Saldo Rp 146.000, tanpa error</i></p>
 
 ---
 
@@ -43,12 +72,12 @@ const saldo = transaksi.reduce((total, item) => {
 }, 0);
 ```
 
-### Conditional Styling
+### Conditional Styling (Hijau/Merah)
 ```js
 color: item.tipe === 'masuk' ? '#16a34a' : '#dc2626'
 ```
 
-### Tambah Transaksi
+### Fungsi Tambah Transaksi
 ```js
 const tambahTransaksi = (tipe) => {
   if (!deskripsi.trim() || !nominal) return;
@@ -62,23 +91,6 @@ const tambahTransaksi = (tipe) => {
   setNominal('');
 };
 ```
-
----
-
-## 📸 Screenshot Aplikasi Berjalan
-
-### Tampilan di HP Android via Expo Go
-
-<p align="center">
-  <img src="./https://github.com/sharmelitasigalingging-cell/DompetKampus/blob/main/ss%20hp.jpeg://github.com/user-attachments/assets/ec1ad393-1a2a-43ea-8b90-f288be87903e" />
-" width="300" alt="DompetKampus di Expo Go"/>
-</p>
-
-### Tampilan di Expo Snack (Browser)
-
-<p align="center">
-  <https://github.com/sharmelitasigalingging-cell/DompetKampus/blob/main/ss%20hp.jpeg>
-</p>
 
 ---
 
@@ -100,29 +112,30 @@ Scan QR code menggunakan aplikasi **Expo Go** di HP Android/iOS.
 
 ---
 
-## 🛠️ Tech Stack
-
-- **React Native** — Framework UI
-- **Expo** — Development environment & build tool
-- **useState Hook** — State management
-- **FlatList** — Optimized list rendering
-
----
-
 ## 📁 Struktur Project
 
 ```
 DompetKampus/
-├── App.js          ← Kode utama aplikasi
+├── App.js
 ├── package.json
 ├── screenshots/
-│   ├── hp_screenshot.jpeg
-│   └── expo_snack.PNG
+│   ├── ss_hp.jpeg        ← Screenshot HP via Expo Go
+│   └── uts_praktek.PNG   ← Screenshot Expo Snack
 └── README.md
 ```
 
 ---
 
+## 🛠️ Tech Stack
+
+- **React Native** — Framework UI Mobile
+- **Expo** — Development & Build Tool
+- **useState Hook** — State Management
+- **FlatList** — Optimized List Rendering
+
+---
+
 <p align="center">
-  Made with ❤️ by <b>Sharmelita Arini Teresia Sigalingging</b>
+  Made with ❤️ by <b>Sharmelita Arini Teresia Sigalingging</b><br/>
+  UTS Pemrograman Mobile — 2026
 </p>
