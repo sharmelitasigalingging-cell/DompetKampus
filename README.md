@@ -77,7 +77,7 @@ const tambahTransaksi = (tipe) => {
 ### Tampilan di Expo Snack (Browser)
 
 <p align="center">
-  <img src="./screenshots/expo_snack.PNG" width="700" alt="DompetKampus di Expo Snack"/>
+  <https://github.com/sharmelitasigalingging-cell/DompetKampus/blob/main/ss%20hp.jpeg>
 </p>
 
 ---
